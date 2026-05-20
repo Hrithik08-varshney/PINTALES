@@ -4,7 +4,7 @@ import React from "react";
 const PlaceItem = ({ place, onPress }) => {
   return (
     <Pressable onPress={onPress}>
-      <Image source={{ uri: place.imageUrl }} style={styles.image} />
+      <Image source={{ uri: place.imageUri }} style={styles.image} />
       <View style={styles.infoContainer}>
         <Text style={styles.title}>{place.title}</Text>
         <Text style={styles.address}>{place.address}</Text>

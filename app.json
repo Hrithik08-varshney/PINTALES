@@ -25,5 +25,14 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
-  }
+  },
+  "plugins": [
+    [
+      "expo-image-picker",
+      {
+        "photosPermission": "Allow PinTales to access your photos",
+        "cameraPermission": "Allow PinTales to access your camera"
+      }
+    ]
+  ]
 }
