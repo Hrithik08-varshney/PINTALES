@@ -3,8 +3,10 @@ import React from "react";
 import { TextInput } from "react-native/types_generated/index";
 import { Colors } from "../../constants/color";
 import ImagePicker from "./ImagePicker";
+import LocationPicker from "./LocationPicker";
+import { useNavigation } from "@react-navigation/native";
 
-const PlaceForm = () => {
+const PlaceForm = ({ initialPickedLocation = null }) => {
   const [enteredTitle, setEnteredTitle] = React.useState("");
 
   const changeTitleHandler = (text) => {
@@ -24,6 +26,7 @@ const PlaceForm = () => {
         />
       </View>
       <ImagePicker />
+      <LocationPicker onLocationPicked={() => {}} pickedLocation={initialPickedLocation} />
     </ScrollView>
   );
 };

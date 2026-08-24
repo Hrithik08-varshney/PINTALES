@@ -1,8 +1,9 @@
-import { View, Text } from "react-native";
 import React from "react";
+import PlaceForm from "../components/Places/PlaceForm";
 
-const AddPlace = () => {
-  return <PlaceForm />;
+const AddPlace = ({ route }) => {
+  const pickedLocation = route?.params?.pickedLocation || null;
+  return <PlaceForm initialPickedLocation={pickedLocation} />;
 };
 
 export default AddPlace;
